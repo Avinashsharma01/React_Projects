@@ -13,7 +13,7 @@ function Todo() {
 
     const [todo, setTodo] = useState(() => {
         const savedTodos = localStorage.getItem("todos");
-        return savedTodos ?  JSON.parse(savedTodos) : initialTodo;
+        return savedTodos ? JSON.parse(savedTodos) : initialTodo;
     });
 
     // this will get the value of input
@@ -30,18 +30,16 @@ function Todo() {
         //     setTodoinput(""); // Reset the todoinput state
         // }
 
-        if(todoinput){
-            const newTodo ={
-                id:todo.length+1,
+        if (todoinput) {
+            const newTodo = {
+                id: todo.length + 1,
                 title: todoinput,
-                completed:false
-            }
-            setTodo([...todo , newTodo])
-            setTodoinput("")
+                completed: false,
+            };
+            setTodo([...todo, newTodo]);
+            setTodoinput("");
         }
     };
-
-
 
     const handleDone = (id) => {
         setTodo(
@@ -58,33 +56,36 @@ function Todo() {
         localStorage.setItem("todos", JSON.stringify(todo));
     }, [todo]); // This effect will run whenever `todo` changes
 
-
-
     // Step 1: Implement the deleteTodo function
     // const deleteTodo = (id) => {
     //     const updatedTodos = todo.filter((item) => item.id !== id);
-         
+
     //     setTodo(updatedTodos); // Update the state with the filtered list
     // };
 
-
-
     const deleteTodo = (id) => {
-        const updatedTodos = todo.filter((item) => item.id !== id || item.deletable === false);
+        const updatedTodos = todo.filter(
+            (item) => item.id !== id || item.deletable === false
+        );
         setTodo(updatedTodos); // Update the state with the filtered list
     };
 
-
     return (
         <div
-            className="w-full h-screen flex justify-center items-center bg-slate-400 "
+            className="main_container w-full h-screen flex justify-center items-center"
             style={{
                 height: "calc(100vh - 120px)",
+                // backgroundColor: "#e0f7fa",
             }}
         >
-            <div className="container w-5/6 h-5/6 bg-slate-500 rounded-md flex justify-center items-center p-10  flex-col">
+            <div className="container w-5/6 h-5/6 bg-slate-600 rounded-md flex justify-center items-center p-10  flex-col">
                 <div className="todoAp h-screen  overflow-y-scroll   ">
-                    <div className="header sticky top-0 bg-slate-700 w-[700px] text-center p-5">
+                    <div
+                        style={{
+                            backgroundColor: "#023050",
+                        }}
+                        className="header sticky top-0 w-[700px] text-center p-5"
+                    >
                         <div className="head">
                             <h1 className="text-4xl text-white mb-5">
                                 Todo App
@@ -102,7 +103,8 @@ function Todo() {
                             />
                             <button
                                 onClick={addTodo}
-                                className="bg-yellow-500 text-white px-5 py-2 rounded-r-md"
+                                className=" text-white px-5 py-2 rounded-r-md"
+                                style={{ backgroundColor: "#005f73" }}
                             >
                                 Add
                             </button>
@@ -129,12 +131,15 @@ function Todo() {
                                 <div className="flex justify-between items-center">
                                     <button
                                         onClick={() => handleDone(item.id)}
-                                        className={`bg-${
-                                            item.completed ? "red" : "yellow"
-                                        }-500 cursor-pointer rounded-md mr-2 text-white px-3 py-1`}
+                                        className={`cursor-pointer rounded-md mr-2 text-white px-3 py-1 ${
+                                            item.completed
+                                                ? "bg-red-500"
+                                                : "bg-green-500"
+                                        }`}
                                     >
                                         {item.completed ? "Undo" : "Done"}
                                     </button>
+
                                     <button // Step 2: Call deleteTodo onClick
                                         onClick={() => deleteTodo(item.id)}
                                         className="bg-red-500 cursor-pointer rounded-md text-white px-3 py-1"
