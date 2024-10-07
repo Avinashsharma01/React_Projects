@@ -39,7 +39,7 @@
 
 /* //media query for mobile view  for 300px width to 600px */
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
     .nav{
         width: 100vw;
         margin: 0;
