@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+main{
+    min-height: calc(100vh - 120px);
+    height: auto;
+    display: flex;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    /* margin-top: 90px; */
+    
+}
+
+table::-webkit-scrollbar{
+    width: 0;
+
+}
+.left{
+    min-height: calc(100vh - 120px);
+}
+
+.right{
+    min-height: calc(100vh - 120px);
+    /* padding: 20px; */
+    overflow-y: auto;
+}
+
+
+.Not_Interested:hover{
+    cursor: pointer;
+    background-color: red;
+    color: white;
+}
+.Interested:hover{
+    cursor: pointer;
+    background-color: green;
+    color: white;
+}
