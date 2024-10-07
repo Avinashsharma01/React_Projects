@@ -31,7 +31,7 @@
 }
 
 .main_container{
-    background: url("./jungle.jpg");
+    background: url("../public/jungle.jpg");
     background-position: center;
     background-size: cover;
 }
