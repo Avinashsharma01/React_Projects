@@ -35,3 +35,29 @@
     background-position: center;
     background-size: cover;
 }
+
+
+/* //media query for mobile view  for 300px width to 600px */
+
+@media screen and (max-width: 400px) {
+    .nav{
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .logofoot h1{
+        font-size: 12px;
+    }
+
+    .logo h1{
+        font-size: 20px;
+    }
+    
+    ul li{
+        font-size: 12px;
+        padding: 5px !important;
+        
+    }
+}
+

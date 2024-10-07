@@ -6,7 +6,7 @@ function Footer() {
           backgroundColor:"#023047"
           
         }} className="nav text-white flex justify-around items-center h-[60px] ">
-            <div className="logo ">
+            <div className="logofoot ">
                 <h1 className="text-1xl">© Avinash Sharma</h1>
             </div>
         </nav>

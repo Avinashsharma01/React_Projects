@@ -4,7 +4,7 @@ function Header() {
     <header className="sticky top-0">
         <nav style={{
             backgroundColor:"#023047"
-        }} className="nav bg-slate-700 text-white flex justify-around items-center h-[60px]">
+        }} className="nav bg-slate-700 text-white flex justify-around items-center h-[60px] max-sm:text-sm ">
             <div className="logo ">
                 <h1 className="text-3xl">Avinash</h1>
             </div>
