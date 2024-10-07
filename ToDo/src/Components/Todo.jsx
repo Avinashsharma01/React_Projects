@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react";
 
 function Todo() {
@@ -79,12 +80,12 @@ function Todo() {
             }}
         >
             <div className="container w-5/6 h-5/6 bg-slate-600 rounded-md flex justify-center items-center p-10  flex-col">
-                <div className="todoAp h-screen  overflow-y-scroll   ">
+                <div className="todoAp h-screen  overflow-y-scroll  flex flex-col items-center  ">
                     <div
                         style={{
                             backgroundColor: "#023050",
                         }}
-                        className="header sticky top-0 w-[700px] text-center p-5"
+                        className="header sticky top-0 w-[500px] md:w-[700px] max-sm:w-[300px] text-center p-5"
                     >
                         <div className="head">
                             <h1 className="text-4xl text-white mb-5">
@@ -113,13 +114,15 @@ function Todo() {
 
                     {/* All item will be added here */}
 
-                    <div className="items ">
+                    <div className="items  ">
                         {todo.map((item) => (
                             <div
                                 key={item.id}
-                                className="item flex justify-between items-center w-[700px] h-10 bg-slate-300 my-2 px-5 rounded-md"
+                                className="item flex justify-between items-center w-[500px] md:w-[700px]  max-sm:w-[300px] h-10 bg-slate-300 my-2 px-5 rounded-md"
                             >
                                 <p
+
+                                    className="max-sm:text-sm"
                                     style={{
                                         textDecoration: item.completed
                                             ? "line-through"
@@ -135,14 +138,14 @@ function Todo() {
                                             item.completed
                                                 ? "bg-red-500"
                                                 : "bg-green-500"
-                                        }`}
+                                        }  max-sm:p-1 max-sm:text-sm  `}
                                     >
                                         {item.completed ? "Undo" : "Done"}
                                     </button>
 
                                     <button // Step 2: Call deleteTodo onClick
                                         onClick={() => deleteTodo(item.id)}
-                                        className="bg-red-500 cursor-pointer rounded-md text-white px-3 py-1"
+                                        className="bg-red-500 cursor-pointer rounded-md text-white px-3 py-1 max-sm:p-1 max-sm:text-sm "  
                                     >
                                         Delete
                                     </button>
