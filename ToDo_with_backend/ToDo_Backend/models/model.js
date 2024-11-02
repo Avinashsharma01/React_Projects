@@ -5,6 +5,7 @@ const todomodel = new mongoose.Schema({
     title: String,
     completed: false,
     deletable: false,
+    date: Date.now()
 })
 
 export default mongoose.model("users", todomodel);

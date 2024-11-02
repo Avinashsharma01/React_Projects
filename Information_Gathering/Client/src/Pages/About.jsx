@@ -1,7 +1,9 @@
 
 function About() {
   return (
-    <div className="w-full h-screen">About</div>
+    <div className=" about w-full h-screen flex justify-center items-center">
+      <h1 className="text-4xl  text-white">About</h1>
+    </div>
   )
 }
 

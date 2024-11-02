@@ -9,7 +9,8 @@ function Login() {
             >
                 <div className="header">
                     <h1 className="text-3xl text-center mb-10 uppercase">
-                        {" "}Login form  {" "}
+                        {" "}
+                        Login form{" "}
                     </h1>
                 </div>
                 <label htmlFor="Username">Username </label>
