@@ -11,7 +11,6 @@ const postMessage = async (req, res) => {
         if (!faculty) {
             return res.status(404).json({ message: 'Faculty not found' });
         }
-
         // Find the student
         const student = await Student.findById(studentId);
         if (!student) {

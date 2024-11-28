@@ -112,7 +112,11 @@ function Message() {
                             </div>
                         ))
                     ) : (
-                        <p className="text-white">No messages available.</p>
+                        <div className="text-white flex w-full h-[493px] justify-center items-center">
+                            <h1 className="text-4xl -mt-24">
+                                No messages found
+                            </h1>
+                        </div>
                     )}
                 </div>
             </div>
