@@ -1,13 +1,13 @@
-import Main from "./componants/Main/Main"
-import Sidebar from "./componants/Sidebar/Sidebar"
+import Main from "./componants/Main/Main";
+import Sidebar from "./componants/Sidebar/Sidebar";
 
 function App() {
-  return (
-    <>
-      <Sidebar/>
-      <Main/>
-    </>
-  )
+    return (
+        <div className="w-full h-screen flex overflow-y-auto">
+            <Sidebar />
+            <Main />
+        </div>
+    );
 }
 
-export default App
+export default App;
