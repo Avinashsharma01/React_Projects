@@ -46,7 +46,7 @@ function Nav() {
                                         src={user.picture}
                                         alt={user.name}
                                     />
-                                    <div className="dropdown hidden group-hover:block absolute bg-slate-600 p-2 rounded-md right-28 top-14   px-5 z-10  ">
+                                    <div className="dropdown hidden group-hover:block absolute bg-slate-600 p-2 rounded-md right-28 top-32   px-5 z-10  ">
                                         <p className="p-1">
                                             Username: {user.name}
                                         </p>

@@ -24,7 +24,7 @@ function Left({ selectedUser }) {
                 console.log(err);
             });
     }, []);
-    //console.log(user.email);
+    console.log(user.email);
 
     // get the faculty id
     useEffect(() => {
